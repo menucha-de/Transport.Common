@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/transport" module="transport-common" />
+
+	<configurations>
+		<conf name="default" />
+		<conf name="module" />
+		<conf name="test" />
+	</configurations>
+
+	<dependencies>
+		<dependency org="havis/transport" name="transport-api" rev="${havis.version}" conf="default;module" />
+		<dependency org="havis/util" name="monitor" rev="${havis.version}" conf="default;module" />
+		<dependency org="havis/net/rest" name="shared" rev="${havis.version}" conf="default->default,src;module" />
+
+		<dependency org="org/jmockit" name="jmockit" rev="${jmockit.version}" conf="default" />
+		<!--dependency org="org/jmockit" name="jmockit-coverage" rev="${jmockit.version}" conf="default" /-->
+		<dependency org="junit" name="junit" rev="${junit.version}" conf="default" />
+		<dependency org="org/osgi" name="org.osgi.core" rev="${osgi.version}" conf="default" />
+
+		<dependency org="org/eclipse/paho" name="org.eclipse.paho.client.mqttv3" rev="${paho.version}" conf="default;module->default" />
+		<dependency org="com/microsoft/azure/sdk/iot" name="iot-device-client" rev="${iot-device-client.version}" conf="default;module->default" />
+		<dependency org="net/sf/supercsv" name="super-csv" rev="${supercsv.version}" conf="default;module->default" />
+
+		<!-- webservice -->
+		<dependency org="org/jboss/resteasy" name="resteasy-jaxrs" rev="${resteasy.version}" conf="default->default,src;module->default" />
+		<dependency org="org/jboss/resteasy" name="resteasy-jdk-http" rev="${resteasy.version}" conf="default->default,src" />
+		<dependency org="org/jboss/resteasy" name="resteasy-jackson2-provider" rev="${resteasy.version}" conf="default->default,src" />
+		<dependency org="org/jboss/resteasy" name="resteasy-jaxb-provider" rev="${resteasy.version}" conf="default->default,src" transitive="false" />
+
+		<dependency org="com/fasterxml/jackson/core" name="jackson-core" rev="${jackson.version}" conf="module->default" />
+		<dependency org="com/fasterxml/jackson/core" name="jackson-databind" rev="${jackson.version}" conf="module->default" />
+		<dependency org="com/fasterxml/jackson/jaxrs" name="jackson-jaxrs-base" rev="${jackson.version}" conf="default->default,src" />
+		<dependency org="com/fasterxml/jackson/jaxrs" name="jackson-jaxrs-json-provider" rev="${jackson.version}" conf="default->default,src" />
+
+		<!-- web service -->
+		<dependency org="javax/ws/rs" name="javax.ws.rs-api" rev="${jaxws-api.version}" conf="default;module" />
+
+		<!-- ALE API for testing -->
+		<dependency org="havis/transform" name="transform-common" rev="${havis.version}" conf="test->default" />
+		<dependency org="havis/middleware" name="ale-api" rev="2.5.0" conf="test->default" />
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.41" conf="test->default" />
+	</dependencies>
+
+</ivy-module>

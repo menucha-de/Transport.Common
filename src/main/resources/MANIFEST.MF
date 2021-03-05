@@ -1,0 +1,37 @@
+Bundle-Name: Ha-VIS Transport Common
+Bundle-SymbolicName: havis.transport-common
+Bundle-Version: 2.7.0
+Implementation-Version: 2.7
+Bundle-ManifestVersion: 2
+Bundle-Vendor: HARTING IT_SD
+Bundle-Activator: havis.transport.common.osgi.Activator
+Import-Package: 
+ com.fasterxml.jackson.core,
+ com.fasterxml.jackson.databind,
+ com.fasterxml.jackson.databind.module,
+ com.microsoft.azure.sdk.iot.device,
+ com.microsoft.azure.sdk.iot.device.transport,
+ com.microsoft.sqlserver.jdbc;resolution:=optional,
+ com.mysql.jdbc;resolution:=optional,
+ havis.transform,
+ havis.transport,
+ havis.util.monitor,
+ javax.net.ssl,
+ javax.script,
+ javax.ws.rs,
+ javax.ws.rs.core,
+ javax.ws.rs.ext,
+ javax.xml.bind,
+ org.eclipse.paho.client.mqttv3,
+ org.eclipse.paho.client.mqttv3.persist,
+ org.h2;resolution:=optional,
+ org.jboss.resteasy.spi,
+ org.osgi.framework;resolution:=optional,
+ org.osgi.util.tracker;resolution:=optional,
+ org.postgresql;resolution:=optional,
+ org.supercsv.cellprocessor.ift,
+ org.supercsv.io,
+ org.supercsv.prefs,
+ org.supercsv.util
+Export-Package: 
+ havis.transport.common
