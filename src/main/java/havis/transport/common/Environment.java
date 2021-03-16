@@ -18,11 +18,11 @@ public class Environment {
 		}
 	}
 
-	public static final String CERT_FOLDER = properties.getProperty("havis.transport.certFolder", "conf/havis/harting/transport/certs");
+	public static final String CERT_FOLDER = properties.getProperty("havis.transport.certFolder", "conf/havis/transport/certs");
 	public static final String TRUST_FILE_NAME = properties.getProperty("havis.transport.trustFileName", "ca");
 	public static final String KEYSTORE_FILE_NAME = properties.getProperty("havis.transport.keyStoreFileName", "key");
 	//TODO MICA depended KeyStore Password
 	public static final String KEYSTORE_PASSWD = properties.getProperty("havis.transport.keyStorePasswd", "passwd");
 
-	public static final String SUBSCRIBER_CONFIG = properties.getProperty("havis.transport.config.subscriber", "conf/havis/harting/transport/subscribers.json");
+	public static final String SUBSCRIBER_CONFIG = properties.getProperty("havis.transport.config.subscriber", "conf/havis/transport/subscribers.json");
 }
